@@ -20,15 +20,16 @@ class App extends Component {
 
     render() {
         const { boards } = this.state;
-        const list = boards.map(row => {
-             return row.brdno + row.brdwriter;
-        });
-
+        
         return (
             <div>
-                {list}
+                {
+                boards.map(row => {
+                    return row.brdno + row.brdwriter;
+                })
+                }
             </div>
-        )
+        );
     }
 }
 
